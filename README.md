@@ -2,21 +2,9 @@
 
 ---
 
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+## Get started (without Docker)
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
 
 Install the dependencies...
 
@@ -36,6 +24,30 @@ Navigate to [localhost:8080](http://localhost:8080). You should see your app run
 By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
 
 If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
+
+## Get started (with Docker)
+
+Create base image...
+
+```bash
+docker build -t svelte-perfis .
+```
+
+...then start:
+
+```bash
+docker run -d -p 3001:5000 --name svelte-perfis_v1.0 svelte-perfis
+```
+
+Navigate to [localhost:3001](http://localhost:3001). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+
+To change the app port, just change the value on Dockerfile CMD command.
+
+To change the container port exposed to your machine, change the -p argument of docker command to required value. For example, to use exposed port 3333:
+
+```bash
+docker run -d -p 3333:5000 --name svelte-perfis_v1.0 svelte-perfis
+```
 
 ## Building and running in production mode
 
