@@ -14,7 +14,7 @@ Svelte: A modern JavaScript framework for building user interfaces. Svelte provi
 
 TypeScript: Svelte Perfis leverages TypeScript for strong typing and enhanced development experience.
 
-# Get started (without Docker)
+## Get started (without Docker)
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
@@ -37,7 +37,7 @@ By default, the server will only respond to requests from localhost. To allow co
 
 If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
 
-# Get started (with Docker)
+## Get started (with Docker)
 
 Create base image...
 
@@ -70,7 +70,6 @@ npm run build
 ```
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
 
 ## Single-page app mode
 
