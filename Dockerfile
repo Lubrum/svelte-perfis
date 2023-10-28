@@ -1,5 +1,5 @@
 # Stage 1: Build the app
-FROM node:16 as builder
+FROM node:20.9.0-alpine as builder
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN npm install --save-dev rollup
 RUN npm run build
 
 # Stage 2: Serve the app using a lightweight base image
-FROM node:16-alpine
+FROM node:20.9.0-alpine
 
 WORKDIR /app
 

@@ -2,7 +2,7 @@ import type IRepositorio from '../interfaces/IRepositorio';
 import type IUsuario from '../interfaces/IUsuario';
 
 export default function montaUsuario(dadosUsuario: any, dadosRepositorios: any): IUsuario {
-  const repositorios_recentes = dadosRepositorios.map((repositorio) => {
+  const repositorios_recentes = dadosRepositorios.map((repositorio: { name: any; html_url: any; }) => {
     return {
       nome: repositorio.name,
       url: repositorio.html_url

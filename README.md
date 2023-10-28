@@ -1,8 +1,20 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Svelte Perfis
 
----
+Svelte Perfis is a simple web application developed using Svelte and TypeScript. Its primary purpose is to help you explore and discover GitHub repositories effortlessly. With a user-friendly input text field, you can search for GitHub users and retrieve information about their most recently updated repositories.
 
-## Get started (without Docker)
+## Key Features
+
+GitHub Repository Search: Enter a GitHub username, and Svelte Perfis will retrieve information about the repositories owned by that user.
+
+Latest Repository Updates: Discover the most recently updated repositories for the user you've searched for. Stay up-to-date with the latest changes and contributions.
+
+## Technologies Used
+
+Svelte: A modern JavaScript framework for building user interfaces. Svelte provides an efficient and highly reactive approach to UI development.
+
+TypeScript: Svelte Perfis leverages TypeScript for strong typing and enhanced development experience.
+
+# Get started (without Docker)
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
@@ -25,7 +37,7 @@ By default, the server will only respond to requests from localhost. To allow co
 
 If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
 
-## Get started (with Docker)
+# Get started (with Docker)
 
 Create base image...
 
