@@ -17,7 +17,7 @@
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.1.6",
-    "svelte": "^5.53.0",
+    "svelte": "^5.53.6",
     "svelte-check": "^3.8.6",
     "svelte-preprocess": "^5.1.4",
     "@rollup/plugin-typescript": "^11.1.5",
