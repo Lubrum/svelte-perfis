@@ -1,7 +1,7 @@
 <div class="barra-superior">
-  <span class="acao" />
-  <span class="acao" />
-  <span class="acao" />
+  <span class="acao"></span>
+  <span class="acao"></span>
+  <span class="acao"></span>
 </div>
 
 <style>

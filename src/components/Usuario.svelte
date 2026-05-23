@@ -16,11 +16,16 @@
   
     <div class="usuario">
       <div class="foto-container">
-        <a href={usuario.perfil_url} target="_blank" rel="noopener">
+        <a
+          href={usuario.perfil_url}
+          target="_blank"
+          rel="noopener"
+          aria-label={`Abrir perfil de ${usuario.login} no GitHub`}
+        >
           <div
             class="foto-usuario"
             style:background-image="url({usuario.avatar_url})"
-          />
+          ></div>
         </a>
       </div>
   
