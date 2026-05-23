@@ -1,14 +1,13 @@
 <script lang="ts">
     import type IUsuario from '../interfaces/IUsuario';
     import BarraSuperior from './BarraSuperior.svelte';
-    export let usuario: IUsuario;
-  
-    let temRepositorios: boolean;
-  
-    $: {
-      temRepositorios = Boolean(usuario.repositorios_recentes.length);
-      console.log(temRepositorios);
+
+    interface Props {
+      usuario: IUsuario;
     }
+
+    let { usuario }: Props = $props();
+    let temRepositorios = $derived(Boolean(usuario.repositorios_recentes.length));
   </script>
   
   <div class="card-usuario">

@@ -4,10 +4,10 @@
   import Usuario from './components/Usuario.svelte';
   import type IUsuario from "./interfaces/IUsuario";
 
-  let usuario: IUsuario | null = null;
+  let usuario = $state<IUsuario | null>(null);
 
-  function definirUsuario(evento: CustomEvent<IUsuario | null>) {
-    usuario = evento.detail;
+  function definirUsuario(usuarioSelecionado: IUsuario | null) {
+    usuario = usuarioSelecionado;
   }
 </script>
 
@@ -16,7 +16,7 @@
     <Titulo />
 
     <div class="busca-usuario">
-      <Formulario on:aoAlterarUsuario={definirUsuario} />
+      <Formulario aoAlterarUsuario={definirUsuario} />
     </div>
   </header>
 

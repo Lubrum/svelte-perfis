@@ -1,18 +1,17 @@
 <script lang="ts">
-    import { createEventDispatcher } from "svelte";
-  
     import type IUsuario from "../interfaces/IUsuario";
     import { buscaRepositorios, buscaUsuario } from '../requisicoes';
     import montaUsuario from '../utils/montaUsuario';
     import Botao from './Botao.svelte';
+
+    interface Props {
+      aoAlterarUsuario: (usuario: IUsuario | null) => void;
+    }
   
-    let valorInput = "";
+    let { aoAlterarUsuario }: Props = $props();
   
-    let statusDeErro: null | number = null;
-  
-    const dispatch = createEventDispatcher<{
-      aoAlterarUsuario: IUsuario | null;
-    }>();
+    let valorInput = $state("");
+    let statusDeErro = $state<null | number>(null);
   
     async function aoSubmeter() {
       const respostaUsuario = await buscaUsuario(valorInput);
@@ -22,20 +21,22 @@
         const dadosUsuario = await respostaUsuario.json();
         const dadosRepositorios = await respostaRepositorios.json();
   
-        dispatch(
-          "aoAlterarUsuario",
-          montaUsuario(dadosUsuario, dadosRepositorios)
-        );
+        aoAlterarUsuario(montaUsuario(dadosUsuario, dadosRepositorios));
         statusDeErro = null;
   
       } else {
         statusDeErro = respostaUsuario.status;
-        dispatch('aoAlterarUsuario', null);
+        aoAlterarUsuario(null);
       }
     }
   </script>
   
-  <form on:submit|preventDefault={aoSubmeter}>
+  <form
+    onsubmit={(evento) => {
+      evento.preventDefault();
+      aoSubmeter();
+    }}
+  >
     <input
       type="text"
       placeholder="Pesquise aqui o usuário"
