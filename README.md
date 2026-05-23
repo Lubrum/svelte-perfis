@@ -1,7 +1,7 @@
 # Svelte Perfis
 
 ![Svelte](https://img.shields.io/badge/Svelte-Frontend-orange?logo=svelte)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 Aplicação web desenvolvida com **Svelte** para exibição e gerenciamento de **perfis de usuários**.
@@ -13,7 +13,7 @@ O projeto demonstra conceitos fundamentais de desenvolvimento frontend com Svelt
 # Tecnologias utilizadas
 
 * Svelte
-* JavaScript
+* TypeScript
 * HTML
 * CSS
 * Node.js
@@ -79,10 +79,34 @@ http://localhost:5173
 
 ---
 
+# Validação
+
+```bash
+npm run check
+npm run build
+```
+
+---
+
 # Build para produção
 
 ```bash
 npm run build
+```
+
+Para pré-visualizar o build localmente:
+
+```bash
+npm run preview
+```
+
+---
+
+# Docker
+
+```bash
+docker build -t svelte-perfis .
+docker run --rm -p 8080:80 svelte-perfis
 ```
 
 ---
@@ -92,10 +116,11 @@ npm run build
 ```
 src
  ├── components
- ├── pages
- ├── assets
+ ├── interfaces
+ ├── requisicoes
+ ├── utils
  ├── App.svelte
- └── main.js
+ └── main.ts
 ```
 
 ---
