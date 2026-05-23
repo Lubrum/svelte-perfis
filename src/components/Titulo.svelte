@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <h1 class="titulo">Svelte Perfis</h1>
 
 <style>

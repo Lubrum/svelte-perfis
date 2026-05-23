@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <div class="barra-superior">
   <span class="acao"></span>
   <span class="acao"></span>

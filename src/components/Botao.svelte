@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <button type="submit" class="botao">
     <slot></slot>
   </button>
